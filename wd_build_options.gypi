@@ -15,6 +15,7 @@
   ],
 
   'defines': [
+    '_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS',
     'QT_NO_DEBUG',
     'QT_GUI_LIB',
     'QT_CORE_LIB',
