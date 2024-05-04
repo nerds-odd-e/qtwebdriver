@@ -24,7 +24,7 @@
                 'VCCLCompilerTool': {
                   'RuntimeLibrary': 3,    # Use /MTd for static debug
                   'Optimization': 0,
-                  'BasicRuntimeChecks': 3
+                  'BasicRuntimeChecks': 0
                 }
               }
           },
