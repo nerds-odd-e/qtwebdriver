@@ -18,7 +18,15 @@
           },
           'Default_x64': {
               'inherit_from': ['Default'],
-              'msvs_configuration_platform': 'x64'
+              'msvs_configuration_platform': 'x64',
+              'defines': [ 'DEBUG=1' ],
+              'msvs_settings': {
+                'VCCLCompilerTool': {
+                  'RuntimeLibrary': 3,    # Use /MTd for static debug
+                  'Optimization': 0,
+                  'BasicRuntimeChecks': 3
+                }
+              }
           },
       },
   },
