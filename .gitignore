@@ -25,3 +25,4 @@ wd.gypi
 /src/webdriver/webdriver_version.cc
 /build-*
 .DS_Store
+out-rel
