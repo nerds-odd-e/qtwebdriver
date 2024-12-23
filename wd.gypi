@@ -19,12 +19,8 @@
           'Default_x64': {
               'inherit_from': ['Default'],
               'msvs_configuration_platform': 'x64',
-              'defines': [ 'DEBUG=1' ],
               'msvs_settings': {
                 'VCCLCompilerTool': {
-                  'RuntimeLibrary': 3,    # Use /MTd for static debug
-                  'Optimization': 0,
-                  'BasicRuntimeChecks': 0,
                   'ProgramDataBaseFileName': '$(OutDir)\\$(ProjectName).pdb'
                 },
                 'VCLinkerTool': {
@@ -34,4 +30,26 @@
           },
       },
   },
+
+  'conditions': [
+    [ 'mode == "debug"', {
+      'target_defaults': {
+          'configurations':
+          {
+              'Default': {
+              },
+              'Default_x64': {
+                  'defines': [ 'DEBUG=1' ],
+                  'msvs_settings': {
+                    'VCCLCompilerTool': {
+                      'RuntimeLibrary': 3,    # Use /MTd for static debug
+                      'Optimization': 0,
+                      'BasicRuntimeChecks': 0,
+                    },
+                  }
+              },
+          },
+      },
+    } ],
+  ],
 }
