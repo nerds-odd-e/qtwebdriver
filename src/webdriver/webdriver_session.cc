@@ -507,7 +507,7 @@ void Session::UpdateViews(const std::set<ViewId>& views) {
         if (vi.is_valid() && 0 == views.count(vi)) {
             // invalidate handle
 //            RemoveView(vi);
-            elements_.erase(viewId.id());
+            elements_.erase(vi.id());
             it = views_.erase(it);
         } else {
           	++it;
