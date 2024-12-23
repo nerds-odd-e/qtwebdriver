@@ -24,7 +24,11 @@
                 'VCCLCompilerTool': {
                   'RuntimeLibrary': 3,    # Use /MTd for static debug
                   'Optimization': 0,
-                  'BasicRuntimeChecks': 0
+                  'BasicRuntimeChecks': 0,
+                  'ProgramDataBaseFileName': '$(OutDir)\\$(ProjectName).pdb'
+                },
+                'VCLinkerTool': {
+                  'ProgramDatabaseFile': '$(OutDir)\\$(ProjectName).pdb'
                 }
               }
           },
